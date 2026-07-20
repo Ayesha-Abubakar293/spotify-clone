@@ -323,3 +323,69 @@ body {
   background-color: #ffffff;
   border-radius: 2px;
 }
+
+/* ========================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES FOR MOBILE & TABLET)
+   ======================================================== */
+
+@media (max-width: 768px) {
+  /* 1. Mobile par left sidebar ko chhupa rahe hain */
+  .sidebar {
+    display: none;
+  }
+
+  /* 2. Main content ko poori width de rahe hain */
+  .main-content {
+    padding: 12px 16px;
+  }
+
+  /* 3. "Good evening" cards ko single column kar rahe hain takay text na tute */
+  .quick-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* 4. Bottom Player bar ke components ki width adjust kar rahe hain */
+  .now-playing {
+    width: 35%;
+  }
+
+  .now-playing img {
+    width: 40px;
+    height: 40px; /* Song image thodi choti */
+  }
+
+  .song-title {
+    font-size: 12px; /* Font size thoda chota */
+  }
+
+  .player-controls {
+    width: 50%;
+  }
+
+  .control-icons {
+    gap: 12px; /* Icons ke beech ka gap kam */
+    font-size: 14px;
+  }
+
+  .play-btn {
+    font-size: 26px;
+  }
+
+  /* 5. Mobile par volume control ko chhupa rahe hain takay player saaf dikhe */
+  .volume-controls {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mazeed choti screens (Mobile portrait) ke liye adjustments */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* Album cards do columns mein set */
+    gap: 10px;
+  }
+  
+  .nav-arrows {
+    display: none; /* Mobile par navigation arrows ki zaroorat nahi hoti */
+  }
+}
